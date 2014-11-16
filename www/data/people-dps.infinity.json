@@ -1,0 +1,845 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:createdBy": "admin",
+        "jcr:title": "People DPS",
+        "cq:template": "/apps/tourism-australia/templates/issue",
+        "dps-exportTemplate": "/etc/contentsync/templates/dps-tourism-australia",
+        "dps-resourceType": "dps:Issue",
+        "dps-resolutionWidth": 768,
+        "dps-resolutionHeight": 1024,
+        "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+        "cq:lastModified": "Thu Oct 16 2014 13:11:50 GMT+0100",
+        "cq:cloudserviceconfigs": "/etc/cloudservices/dps/am-dps",
+        "jcr:description": "Tourism Australia folio",
+        "cq:deviceGroups": [
+            "/etc/mobile/groups/responsive"
+        ],
+        "dps-folioIntent": "PortraitOnly",
+        "sling:resourceType": "tourism-australia/components/pages/issue",
+        "cq:designPath": "/etc/designs/tourism-australia",
+        "cq:lastModifiedBy": "admin",
+        "image": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:lastModified": "Thu Oct 16 2014 13:11:50 GMT+0100",
+            "imageRotate": "0"
+        }
+    },
+    "australia-s-top-chefs": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Australia's Top Chefs",
+            "cq:template": "/apps/tourism-australia/templates/article-wcm-tourism-australia",
+            "dps-resourceType": "dps:Article",
+            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+            "cq:lastModified": "Thu Oct 16 2014 13:42:59 GMT+0100",
+            "jcr:description": "A true expression of our young, free-spirited and uninhibited culture, our food and wine has become a great way to get to know us",
+            "pageTitle": "Australia's Top Chefs",
+            "cq:tags": [
+                "tourism-australia:pillars/people",
+                "tourism-australia:pillars/Restaurants"
+            ],
+            "sling:resourceType": "tourism-australia/components/pages/article-wcm",
+            "cq:designPath": "/etc/designs/tourism-australia",
+            "cq:lastModifiedBy": "admin",
+            "par": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "foundation/components/parsys",
+                "article": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "media/articles/components/article"
+                },
+                "textimage": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "jcr:created": "Thu Oct 16 2014 13:40:31 GMT+0100",
+                    "jcr:lastModified": "Thu Oct 16 2014 13:40:58 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/textimage",
+                    "textIsRich": "true",
+                    "image": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:lastModifiedBy": "admin",
+                        "jcr:description": "Tetsuya Wakuda, Margaret River Gourmet Escape, Margaret River, WA ",
+                        "jcr:lastModified": "Thu Oct 16 2014 13:40:58 GMT+0100",
+                        "sling:resourceType": "foundation/components/image",
+                        "imageRotate": "0",
+                        "file": {
+                            "jcr:primaryType": "nt:file",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                            "jcr:content": {
+                                "jcr:primaryType": "nt:resource",
+                                "jcr:lastModifiedBy": "admin",
+                                "jcr:mimeType": "image/jpeg",
+                                "jcr:lastModified": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                                ":jcr:data": 371206,
+                                "jcr:uuid": "212f8399-6676-443e-b325-2c553040b133"
+                            }
+                        }
+                    }
+                },
+                "articletext": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "jcr:created": "Thu Oct 16 2014 13:41:04 GMT+0100",
+                    "text": "<p>Australia has never been a more exciting or rewarding place to eat. Australian chefs are taking our tastebuds into uncharted territory, providing the talent and inspiration to revolutionise the kitchens of Australian restaurants. Unconstrained by notions of what is right or wrong, they have embraced our multicultural heritage, been experimenting and breaking most of the rules along the way, all the while bringing a genuine passion to what they do.</p>\n",
+                    "jcr:lastModified": "Thu Oct 16 2014 13:41:11 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/articletext",
+                    "textIsRich": "true"
+                },
+                "articletext_0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "articletitle": "Award-winning chefs",
+                    "jcr:created": "Thu Oct 16 2014 13:41:19 GMT+0100",
+                    "text": "<p>Melbourne chef Ben Shewry’s restaurant Attica climbed to No. 21 on the San Pellegrino World’s Best Restaurant list in 2013. It now sits at No. 32 (2014 List), continuing its place as the top restaurant in Australasia. Shewry is passionate about creating culinary delights, but he also likes grabbing his board and going surfing.<br>\n<br>\nThis is typical of the down-to-earth style that characterises so many chefs in Australia’s food and wine scene.<br>\n<br>\nFor Peter Gilmore, one of Australia’s great chefs, with the highly awarded Quay restaurant also featuring in the San Pellegrino World’s Best Restaurants, the remarkable skill he shows in the kitchen – focusing on the texture, harmony and balance of Japanese, Korean and Chinese cuisines - was partly shaped by his early years. “I rely on my own set of sensibilities and experiences of growing up in a multicultural society,” he says.<br>\n<br>\n“We are generally very relaxed and easy-going characters,” says Chinese Australian chef Kylie Kwong. “Our food reflects this – it’s fresh, light and flavoursome. It’s a generous culture, a ‘feel-good’ culture, based on a natural openness and honesty.”<br>\n<br>\nNeil Perry, one of Australia’s best known-chefs whose 25-year career has seen him earn numerous accolades and the deep respect of the industry, works around the clock at his Rockpool empire and as executive chef for Qantas. But you’ll also see him at a humble Chinatown hole in the wall downing a bowl of noodles.&nbsp;<br>\n</p>\n",
+                    "jcr:lastModified": "Thu Oct 16 2014 13:41:34 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/articletext",
+                    "textIsRich": "true"
+                },
+                "textimage_0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "articletitle": "International influences",
+                    "jcr:created": "Thu Oct 16 2014 13:41:41 GMT+0100",
+                    "text": "<p>Australia is a wonderful mix of migrants and cultures from all over the world, a melting pot of traditions that lives on strongly in many communities.<br>\n<br>\nIndustry icons Cheong Liew and Tetsuya Wakuda pioneered the art of fusing Asian flavours with European techniques; Peter Conistis took the food of his Greek heritage and made it his own; and several of our finest chefs, including Neil Perry and Luke Mangan, take influences from Asia, Italy and Spain to produce uniquely Australian dishes that showcase their exemplary skills and the depth and quality of our produce.<br>\n<br>\nWith nearly a quarter of Australians born overseas, there is little wonder those in the food and wine industries have absorbed so many different styles. “Australia is such a young country in an age of travel and sharing information… and it acts like a sponge,” says Momofuku star chef David Chang. “If any country can get away from asking ‘What’s our tradition?’ and say, ‘Let’s just eat good food’, it’s definitely Australia.&quot;<br>\n<br>\nLeading chef and television personality Karen Martini agrees. “Oddly, it’s probably our lack of a definable food culture that makes Australia’s approach to food so unique,” she says. “What we cook is shaped by such a range of influences, from traditional cuisines to some more modern perspectives, and I think Australian cooks have developed in a way that respects these influences without being restricted by them.”<br>\n<br>\nIt’s a confidence that has seen Australian chefs take their place on the world stage, with Thai food scholar David Thompson’s Nahm in Bangkok holding No. 13 place on the San Pellegrino World’s Best Restaurants list, and the highest-ranked Australian Brett Graham coming in at No. 10 with London’s The Ledbury. Bill Granger’s popularity continues to grow beyond Australian shores, with his breezy yet benchmark cafe formula winning over crowds in London and Tokyo, while Luke Mangan can add Jakarta, Tokyo, Singapore and Seminyak to his Australian restaurant portfolio.<br>\n<br>\n</p>\n",
+                    "jcr:lastModified": "Thu Oct 16 2014 13:42:12 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/textimage",
+                    "textIsRich": "true",
+                    "image": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:lastModifiedBy": "admin",
+                        "jcr:description": "Karen Martini, chef, Melbourne, VIC",
+                        "jcr:lastModified": "Thu Oct 16 2014 13:42:12 GMT+0100",
+                        "sling:resourceType": "foundation/components/image",
+                        "imageRotate": "0",
+                        "file": {
+                            "jcr:primaryType": "nt:file",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                            "jcr:content": {
+                                "jcr:primaryType": "nt:resource",
+                                "jcr:lastModifiedBy": "admin",
+                                "jcr:mimeType": "image/jpeg",
+                                "jcr:lastModified": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                                ":jcr:data": 281430,
+                                "jcr:uuid": "0d94f49a-5918-4532-8a1d-e75f758e7834"
+                            }
+                        }
+                    }
+                },
+                "textimage_1": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "articletitle": "Australia's emerging food and wine culture",
+                    "jcr:created": "Thu Oct 16 2014 13:42:23 GMT+0100",
+                    "text": "<p>Robert Hill Smith heads Yalumba, Australia’s oldest family-owned winery, dating from 1849, and is a staunch protector of family tradition – yet he leads the charge with new wine styles and varieties. At the other end of the spectrum are young winemakers who ferment biodynamic wine in huge ceramic eggs or serve it rudely fresh from demijohns on bar counters.<br>\n<br>\nIt’s that relaxed approach that marks Australia’s food and wine community out as being different from the rest of the world. In the same way that customers are encouraged to leave the tie at home, so too chefs, waiters, growers, winemakers, baristas and sommeliers have a down-to-earth approach that is warm, welcoming and unpretentious. “It’s hard for me to put my finger on it, but I think&nbsp; the relaxed, professional, quality blend is what we do so well, and so differently to the rest,” says Andrew McConnell, chef and owner of Melbourne landmarks Cumulus Inc and Cutler &amp; Co.<br>\n<br>\nThere’s also pride that stems from the fact that Australia has never been a more exciting or rewarding place to eat. That extends to a desire to connect with and celebrate Indigenous produce, unique ingredients that can only be found in Australia.<br>\n<br>\nKylie Kwong describes it as “Australia on a plate” which, for her, means integrating native ingredients with the classic Cantonese dishes of her heritage.<br>\n<br>\nUp and coming chefs, too, are embracing the produce around them with a confidence that reflects the maturing of the Australian food culture.<br>\n<br>\nIn just one generation, the Australian palate has moved on from the English-leaning “meat and three veg” approach to the diversity of cuisines enjoyed today and a freedom to explore new flavours and techniques.<br>\n<br>\n“We’re cheeky,” says Australian food writer Jill Dupleix. Without the weight of a large&nbsp; population and long history bearing down upon us, she says, we’re free to experiment and eat what we like.<br>\n&quot;The rest of the world still thinks we’re doing East meets West, or Pacific Rim, but we’re not. We’re doing Australian food, cooked by Australians, for Australians.&quot; - Jill Dupleix<br>\n<br>\nThe Australian food and wine industry is a bounty of passion and self-deprecating humility. It has a democratic mindset that holds firmly to the belief that good food and wine should be accessible to everyone, and an acute sense of itself that is clear in both the people and the food.<br>\n<br>\nBenjamin Cooper, from Melbourne’s Chin Chin, believes there is a warmth to our hospitality and a genuine enthusiasm.<br>\n<br>\n“A lot of it comes down to people,” he says. “Australians have a terrific attitude to dining and cooking. We’ve embraced all these cultures, ditched a lot of the stuffy tradition and bring a genuine passion to what we do.”&nbsp;<br>\n</p>\n",
+                    "jcr:lastModified": "Thu Oct 16 2014 13:42:59 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/textimage",
+                    "textIsRich": "true",
+                    "image": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:lastModifiedBy": "admin",
+                        "jcr:description": "Andrew McConnell, chef, Melbourne, VIC",
+                        "jcr:lastModified": "Thu Oct 16 2014 13:42:59 GMT+0100",
+                        "sling:resourceType": "foundation/components/image",
+                        "imageRotate": "0",
+                        "file": {
+                            "jcr:primaryType": "nt:file",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                            "jcr:content": {
+                                "jcr:primaryType": "nt:resource",
+                                "jcr:lastModifiedBy": "admin",
+                                "jcr:mimeType": "image/jpeg",
+                                "jcr:lastModified": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                                ":jcr:data": 158359,
+                                "jcr:uuid": "ac25e195-181d-4db8-9a9b-8164cbe4e69b"
+                            }
+                        }
+                    }
+                }
+            },
+            "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:lastModified": "Thu Oct 16 2014 13:39:36 GMT+0100",
+                "imageRotate": "0"
+            }
+        }
+    },
+    "ben-shewry": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Ben Shewry",
+            "cq:template": "/apps/tourism-australia/templates/article-wcm-tourism-australia",
+            "dps-resourceType": "dps:Article",
+            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+            "cq:lastModified": "Thu Oct 16 2014 13:46:59 GMT+0100",
+            "jcr:description": "Multi-award winning restaurant Attica's chef Ben Shewry creates beautifully balanced, modern cuisine in a relaxed dining environment",
+            "pageTitle": "Ben Shewry",
+            "cq:tags": [
+                "tourism-australia:pillars/people",
+                "tourism-australia:pillars/Restaurants"
+            ],
+            "sling:resourceType": "tourism-australia/components/pages/article-wcm",
+            "cq:designPath": "/etc/designs/tourism-australia",
+            "cq:lastModifiedBy": "admin",
+            "par": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "foundation/components/parsys",
+                "textimage": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "jcr:created": "Thu Oct 16 2014 13:44:51 GMT+0100",
+                    "jcr:lastModified": "Thu Oct 16 2014 13:45:45 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/textimage",
+                    "textIsRich": "true",
+                    "image": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:lastModifiedBy": "admin",
+                        "jcr:description": "Ben Shewry, chef, Melbourne, VIC",
+                        "jcr:lastModified": "Thu Oct 16 2014 13:45:45 GMT+0100",
+                        "sling:resourceType": "foundation/components/image",
+                        "imageRotate": "0",
+                        "file": {
+                            "jcr:primaryType": "nt:file",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                            "jcr:content": {
+                                "jcr:primaryType": "nt:resource",
+                                "jcr:lastModifiedBy": "admin",
+                                "jcr:mimeType": "image/jpeg",
+                                "jcr:lastModified": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                                ":jcr:data": 315227,
+                                "jcr:uuid": "a2890f7c-ea66-44ec-9905-31bef768dc4a"
+                            }
+                        }
+                    }
+                },
+                "articletext": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "articletitle": "about",
+                    "jcr:created": "Thu Oct 16 2014 13:45:49 GMT+0100",
+                    "text": "<p>Ben Shewry grew up in rural New Zealand, training as a chef with notable mentors in the late 1990s, before making the move to Australia. Shewry’s restaurant Attica has garnered the attention of top food critics from Australia and beyond, and is the only Australian restaurant included in the S. Pellegrino World’s 50 Best Restaurants list in 2014.<br>\n<br>\nAfter moving to Australia, the mild-mannered family man worked with many local heroes including Andrew McConnell and Donovan Cooke among them and not-so-local Australian star David Thompson, whose Thai influence provided early direction for Attica, Ben’s one-and-only restaurant.<br>\n<br>\nBen quickly abandoned stylistic influences with a mix of free thinking, curiosity and natural inclination towards the foraged and found, the wild and the woolly, to create dishes with personal emotional resonance. Ben was foraging before it was popular and has formed tight bonds with a “who’s who” of avant garde international chefs such as Rene Redzepi of Noma, in Copenhagen.<br>\n<br>\nIn 2010, he became the first ever Victorian chef to present at Barcelona's Madrid Fusion, and then in 2011 Ben was the only Australian presenter at the inaugural MAD FoodCamp, hosted by Redzepi.<br>\n<br>\nKnown for his ethical and sustainable approach to cooking, Ben has been recognised for his ‘uniquely imaginative and outstandingly good’ dishes. He is also widely known for foraging raw materials for his dishes from his own garden and his home environment in the Great Ocean Road region of Victoria.<br>\n<br>\nBen’s book Origins, outlining his philosophies and emotional inspirations, was published in 2013. A keen surfer, he remains laidback and down-to-earth despite his remarkable international success.</p>\n",
+                    "jcr:lastModified": "Thu Oct 16 2014 13:46:14 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/articletext",
+                    "textIsRich": "true"
+                },
+                "textimage_0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "articletitle": "Ben’s signature dish is potato cooked in the earth it was grown in.",
+                    "jcr:created": "Thu Oct 16 2014 13:46:19 GMT+0100",
+                    "text": "<p>Phone<br>\n+61 3 9530 0111<br>\nAddress<br>\nAttica, 74 Glen Eira Road<br>\nRipponlea VICTORIA 3185<br>\n<br>\nattica.com.au</p>\n",
+                    "jcr:lastModified": "Thu Oct 16 2014 13:46:59 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/textimage",
+                    "textIsRich": "true",
+                    "image": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:lastModifiedBy": "admin",
+                        "jcr:description": "Google Map image of Australia",
+                        "jcr:lastModified": "Thu Oct 16 2014 13:46:59 GMT+0100",
+                        "sling:resourceType": "foundation/components/image",
+                        "imageRotate": "0",
+                        "file": {
+                            "jcr:primaryType": "nt:file",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                            "jcr:content": {
+                                "jcr:primaryType": "nt:resource",
+                                "jcr:lastModifiedBy": "admin",
+                                "jcr:mimeType": "image/png",
+                                "jcr:lastModified": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                                ":jcr:data": 10122,
+                                "jcr:uuid": "883592e7-0e6d-41b9-931b-55d22fc4dcce"
+                            }
+                        }
+                    }
+                },
+                "article": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "media/articles/components/article"
+                }
+            },
+            "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:lastModified": "Thu Oct 16 2014 13:44:42 GMT+0100",
+                "imageRotate": "0"
+            }
+        }
+    },
+    "george-calombaris": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:createdBy": "admin",
+            "jcr:title": "George Calombaris",
+            "cq:template": "/apps/tourism-australia/templates/article-wcm-tourism-australia",
+            "dps-resourceType": "dps:Article",
+            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+            "cq:lastModified": "Thu Oct 16 2014 13:50:51 GMT+0100",
+            "jcr:description": "Melbourne chef and restaurateur, George Calombaris, is a judge and presenter on MasterChef Australia",
+            "pageTitle": "George Calombaris",
+            "cq:tags": [
+                "tourism-australia:pillars/people",
+                "tourism-australia:pillars/Restaurants"
+            ],
+            "sling:resourceType": "tourism-australia/components/pages/article-wcm",
+            "cq:designPath": "/etc/designs/tourism-australia",
+            "cq:lastModifiedBy": "admin",
+            "par": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "foundation/components/parsys",
+                "article": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "media/articles/components/article"
+                },
+                "textimage": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "jcr:created": "Thu Oct 16 2014 13:48:52 GMT+0100",
+                    "jcr:lastModified": "Thu Oct 16 2014 13:49:48 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/textimage",
+                    "textIsRich": "true",
+                    "image": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:lastModifiedBy": "admin",
+                        "jcr:description": "George Calombaris, chef, Melbourne, VIC",
+                        "jcr:lastModified": "Thu Oct 16 2014 13:49:48 GMT+0100",
+                        "sling:resourceType": "foundation/components/image",
+                        "imageRotate": "0",
+                        "file": {
+                            "jcr:primaryType": "nt:file",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                            "jcr:content": {
+                                "jcr:primaryType": "nt:resource",
+                                "jcr:lastModifiedBy": "admin",
+                                "jcr:mimeType": "image/jpeg",
+                                "jcr:lastModified": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                                ":jcr:data": 310860,
+                                "jcr:uuid": "45cd1808-1fc1-4e5e-8f62-70fe177b82cd"
+                            }
+                        }
+                    }
+                },
+                "articletext": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "articletitle": "About",
+                    "jcr:created": "Thu Oct 16 2014 13:49:52 GMT+0100",
+                    "text": "<p>George Calombaris is a well-known restaurateur, celebrity chef and author. He was named as Melbourne’s chef of the year in 2008 and recently opened a new incarnation of his Greek restaurant, The Press Club. He has appeared as a judge and presenter on MasterChef Australia and has authored five books including Greek Cookery from the Hellenic Heart.</p>\n",
+                    "jcr:lastModified": "Thu Oct 16 2014 13:50:14 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/articletext",
+                    "textIsRich": "true"
+                },
+                "articletext_0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "articletitle": "What dish sums up your city?",
+                    "jcr:created": "Thu Oct 16 2014 13:50:17 GMT+0100",
+                    "text": "<p>I think it’s a cup of coffee. And the reason I say that is that when I’m overseas I explain that Melbourne’s like going into a shopping mall that has everything. We’ve got the best Chinese, we’ve got the best Vietnamese, the best Greek, the best Italian. And we’re lucky – you can go minutes in any direction and find amazing stuff. But the one thing that binds us all together is coffee. You don’t really hear that a place has bad coffee because if a place has bad coffee, they generally close very quickly. In the last five years, the barista has become the rock star. And it’s great that they’re being taken seriously because it’s a craft and we need more of that in our industry.</p>\n",
+                    "jcr:lastModified": "Thu Oct 16 2014 13:50:29 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/articletext",
+                    "textIsRich": "true"
+                },
+                "textimage_0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "jcr:created": "Thu Oct 16 2014 13:50:32 GMT+0100",
+                    "text": "<p>Phone<br>\n+61 3 9677 9677<br>\nAddress<br>\nThe Press Club, 52 Flinders Street<br>\nMelbourne VICTORIA 3000<br>\n<br>\nthepressclub.com.au</p>\n",
+                    "jcr:lastModified": "Thu Oct 16 2014 13:50:51 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/textimage",
+                    "textIsRich": "true",
+                    "image": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:lastModifiedBy": "admin",
+                        "jcr:lastModified": "Thu Oct 16 2014 13:50:51 GMT+0100",
+                        "sling:resourceType": "foundation/components/image",
+                        "imageRotate": "0",
+                        "file": {
+                            "jcr:primaryType": "nt:file",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                            "jcr:content": {
+                                "jcr:primaryType": "nt:resource",
+                                "jcr:lastModifiedBy": "admin",
+                                "jcr:mimeType": "image/png",
+                                "jcr:lastModified": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                                ":jcr:data": 10101,
+                                "jcr:uuid": "9833e472-33f7-44fc-a1bc-36069dd1381e"
+                            }
+                        }
+                    }
+                }
+            },
+            "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:lastModified": "Thu Oct 16 2014 13:48:43 GMT+0100",
+                "imageRotate": "0"
+            }
+        }
+    },
+    "maggie-beer": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Maggie Beer",
+            "cq:template": "/apps/tourism-australia/templates/article-wcm-tourism-australia",
+            "dps-resourceType": "dps:Article",
+            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+            "cq:lastModified": "Thu Oct 16 2014 13:53:35 GMT+0100",
+            "jcr:description": "Based in South Australia's Barossa Valley Maggie Beer is a self-taught cook, food author, restaurateur and food producer",
+            "pageTitle": "Maggie Beer",
+            "cq:tags": [
+                "tourism-australia:pillars/people",
+                "tourism-australia:pillars/Restaurants"
+            ],
+            "sling:resourceType": "tourism-australia/components/pages/article-wcm",
+            "cq:designPath": "/etc/designs/tourism-australia",
+            "cq:lastModifiedBy": "admin",
+            "par": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "foundation/components/parsys",
+                "textimage": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "jcr:created": "Thu Oct 16 2014 13:52:34 GMT+0100",
+                    "jcr:lastModified": "Thu Oct 16 2014 13:52:49 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/textimage",
+                    "textIsRich": "true",
+                    "image": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:lastModifiedBy": "admin",
+                        "jcr:description": "Maggie Beer AM, chef, Barossa Valley, SA",
+                        "jcr:lastModified": "Thu Oct 16 2014 13:52:49 GMT+0100",
+                        "sling:resourceType": "foundation/components/image",
+                        "imageRotate": "0",
+                        "file": {
+                            "jcr:primaryType": "nt:file",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                            "jcr:content": {
+                                "jcr:primaryType": "nt:resource",
+                                "jcr:lastModifiedBy": "admin",
+                                "jcr:mimeType": "image/jpeg",
+                                "jcr:lastModified": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                                ":jcr:data": 447304,
+                                "jcr:uuid": "742eb372-76d7-43c4-918d-f38cc50bd754"
+                            }
+                        }
+                    }
+                },
+                "articletext": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "articletitle": "About",
+                    "jcr:created": "Thu Oct 16 2014 13:52:53 GMT+0100",
+                    "text": "<p>Maggie Beer is one of the most well-loved Australian cooks, restaurateurs, TV personalities and authors. After farming pheasants with her husband in the Barossa Valley in South Australia, Maggie began producing gourmet food products and now has more than 20 products sold in local and international markets, including Pheasant Farm Pate, quince paste, verjuice and ice creams. She also runs The Farm Shop in the Barossa that stocks her range as well as “picnic fare” and wines.<br>\n<br>\nMaggie opened The Barossa Pheasant Farm Restaurant in 1978 operating it until 1993. Her informed take on country cooking, focusing squarely on her local region and seasonality, was ahead of its time yet inspired by the likes of Alice Waters, in California.<br>\n<br>\nMaggie’s contribution to the Australian food scene has been formally recognised with numerous awards including the Centenary Medal for service to Australian society through food and cooking and writing. In 2010 she was awarded the “Senior Australian of the Year’ and in 2012 was appointed a Member of the Order of Australia (AM) for “service to the tourism and hospitality industries as a cook, restaurateur and author, and to the promotion of Australian produce and cuisine.”<br>\n<br>\nMaggie has written several books about food and food preparation and has co-hosted the ABC television cooking program The Cook and the Chef and appeared several times as a guest judge and guest masterclass presenter on MasterChef Australia.<br>\n<br>\nMaggie’s signature dish is grape growers roast Barossa chook with grapes and verjuice.</p>\n",
+                    "jcr:lastModified": "Thu Oct 16 2014 13:53:16 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/articletext",
+                    "textIsRich": "true"
+                },
+                "textimage_0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "jcr:created": "Thu Oct 16 2014 13:53:20 GMT+0100",
+                    "text": "<p>Phone<br>\n+61 8 8562 4477<br>\nAddress<br>\nThe Farm Shop, 50 Pheasant Farm Road<br>\nNuriootpa SOUTH AUSTRALIA 5355<br>\n<br>\nmaggiebeer.com.au</p>\n",
+                    "jcr:lastModified": "Thu Oct 16 2014 13:53:35 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/textimage",
+                    "textIsRich": "true",
+                    "image": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:lastModifiedBy": "admin",
+                        "jcr:lastModified": "Thu Oct 16 2014 13:53:35 GMT+0100",
+                        "sling:resourceType": "foundation/components/image",
+                        "imageRotate": "0",
+                        "file": {
+                            "jcr:primaryType": "nt:file",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                            "jcr:content": {
+                                "jcr:primaryType": "nt:resource",
+                                "jcr:lastModifiedBy": "admin",
+                                "jcr:mimeType": "image/png",
+                                "jcr:lastModified": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                                ":jcr:data": 10105,
+                                "jcr:uuid": "ab6bbadd-106e-453b-9a7b-5b6fb6a6113d"
+                            }
+                        }
+                    }
+                },
+                "article": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "media/articles/components/article"
+                }
+            },
+            "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:lastModified": "Thu Oct 16 2014 13:52:27 GMT+0100",
+                "imageRotate": "0"
+            }
+        }
+    },
+    "matt-moran": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Matt Moran",
+            "cq:template": "/apps/tourism-australia/templates/article-wcm-tourism-australia",
+            "dps-resourceType": "dps:Article",
+            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+            "cq:lastModified": "Thu Oct 16 2014 13:57:56 GMT+0100",
+            "jcr:description": "Matt Moran is the well-known Australian chef and restaurateur of a number of successful restaurants in Sydney and Brisbane",
+            "pageTitle": "Matt Moran",
+            "cq:tags": [
+                "tourism-australia:pillars/people",
+                "tourism-australia:pillars/Restaurants"
+            ],
+            "sling:resourceType": "tourism-australia/components/pages/article-wcm",
+            "cq:designPath": "/etc/designs/tourism-australia",
+            "cq:lastModifiedBy": "admin",
+            "par": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "foundation/components/parsys",
+                "article": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "media/articles/components/article"
+                },
+                "textimage": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "jcr:created": "Thu Oct 16 2014 13:56:27 GMT+0100",
+                    "jcr:lastModified": "Thu Oct 16 2014 13:57:12 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/textimage",
+                    "textIsRich": "true",
+                    "image": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:lastModifiedBy": "admin",
+                        "jcr:description": "Matt Moran, chef, Sydney, NSW",
+                        "jcr:lastModified": "Thu Oct 16 2014 13:57:12 GMT+0100",
+                        "sling:resourceType": "foundation/components/image",
+                        "imageRotate": "0",
+                        "file": {
+                            "jcr:primaryType": "nt:file",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                            "jcr:content": {
+                                "jcr:primaryType": "nt:resource",
+                                "jcr:lastModifiedBy": "admin",
+                                "jcr:mimeType": "image/jpeg",
+                                "jcr:lastModified": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                                ":jcr:data": 325035,
+                                "jcr:uuid": "19deb0a5-3680-4180-be23-10cb32dac527"
+                            }
+                        }
+                    }
+                },
+                "articletext": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "articletitle": "about",
+                    "jcr:created": "Thu Oct 16 2014 13:57:16 GMT+0100",
+                    "text": "<p>Matt Moran is the well-known Australian chef and restaurateur of a number of successful restaurants including ARIA Sydney, ARIA Brisbane, CHISWICK and the newly opened Riverbar &amp; Kitchen. Matt has appeared on a number of TV shows including Paddock to Plate, The Chopping Block, Masterchef and My Restaurant Rules and has also written a number of cookbooks.<br>\n<br>\nRaised in Sydney, Matt has shared his professional life almost exclusively with business partner Peter Sullivan, with whom he launched The Paddington Inn back in 1991. In 1999, the pair opened the doors to ARIA Restaurant, Circular Quay with its sensational views of Sydney Opera House and Sydney Harbour.&nbsp; ARIA Brisbane opened in 2009 and is situated in the Eagle Street Pier precinct on the riverfront, boasting spectacular views of the Brisbane River and the Story Bridge.<br>\n<br>\nMatt’s driving force remains seasonality and a passion for producing the best contemporary food possible, with a true sense of professionalism and hospitality. His contemporary menus are inspired by his passion for sourcing the finest seasonal produce available.<br>\n<br>\nSince 2003 he has been a member of the International Culinary Panel for Singapore Airlines, and has represented Australia in promoting food and wine in Asia and most recently GQ Magazine awarded him Chef of the Year in November 2012. Matt is currently writing his fourth book based around the kitchen garden and seasonal cooking.<br>\n<br>\nMatt’s signature dish is roasted scallops with calamari, razor clams, warm vinaigrette of celery, dulse and hazelnut oil.</p>\n",
+                    "jcr:lastModified": "Thu Oct 16 2014 13:57:32 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/articletext",
+                    "textIsRich": "true"
+                },
+                "textimage_0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "jcr:created": "Thu Oct 16 2014 13:57:37 GMT+0100",
+                    "text": "<p>Phone<br>\n+61 2 9240 2255<br>\nAddress<br>\nARIA Restaurant, 1 Macquarie Street<br>\nEast Circular Quay, Sydney NEW SOUTH WALES 2000<br>\n<br>\nmattmoran.com.au</p>\n",
+                    "jcr:lastModified": "Thu Oct 16 2014 13:57:56 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/textimage",
+                    "textIsRich": "true",
+                    "image": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:lastModifiedBy": "admin",
+                        "jcr:lastModified": "Thu Oct 16 2014 13:57:56 GMT+0100",
+                        "sling:resourceType": "foundation/components/image",
+                        "imageRotate": "0",
+                        "file": {
+                            "jcr:primaryType": "nt:file",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                            "jcr:content": {
+                                "jcr:primaryType": "nt:resource",
+                                "jcr:lastModifiedBy": "admin",
+                                "jcr:mimeType": "image/png",
+                                "jcr:lastModified": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                                ":jcr:data": 10071,
+                                "jcr:uuid": "137ef0ce-698f-4633-b03e-f1e3b1978e5a"
+                            }
+                        }
+                    }
+                }
+            },
+            "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:lastModified": "Thu Oct 16 2014 13:56:14 GMT+0100",
+                "imageRotate": "0"
+            }
+        }
+    },
+    "neil-perry": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Neil Perry",
+            "cq:template": "/apps/tourism-australia/templates/article-wcm-tourism-australia",
+            "dps-resourceType": "dps:Article",
+            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+            "cq:lastModified": "Thu Oct 16 2014 14:01:11 GMT+0100",
+            "jcr:description": "Neil Perry is one of Australia’s leading and most influential chefs",
+            "pageTitle": "Neil Perry",
+            "cq:tags": [
+                "tourism-australia:pillars/people",
+                "tourism-australia:pillars/Restaurants"
+            ],
+            "sling:resourceType": "tourism-australia/components/pages/article-wcm",
+            "cq:designPath": "/etc/designs/tourism-australia",
+            "cq:lastModifiedBy": "admin",
+            "par": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "foundation/components/parsys",
+                "textimage": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "jcr:created": "Thu Oct 16 2014 14:00:09 GMT+0100",
+                    "jcr:lastModified": "Thu Oct 16 2014 14:00:27 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/textimage",
+                    "textIsRich": "true",
+                    "image": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:lastModifiedBy": "admin",
+                        "jcr:description": "Neil Perry AM, Chef, Sydney, NSW",
+                        "jcr:lastModified": "Thu Oct 16 2014 14:00:27 GMT+0100",
+                        "sling:resourceType": "foundation/components/image",
+                        "imageRotate": "0",
+                        "file": {
+                            "jcr:primaryType": "nt:file",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                            "jcr:content": {
+                                "jcr:primaryType": "nt:resource",
+                                "jcr:lastModifiedBy": "admin",
+                                "jcr:mimeType": "image/jpeg",
+                                "jcr:lastModified": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                                ":jcr:data": 272881,
+                                "jcr:uuid": "1419f62c-50fd-4340-892b-4b1870d9fc77"
+                            }
+                        }
+                    }
+                },
+                "articletext": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "articletitle": "about",
+                    "jcr:created": "Thu Oct 16 2014 14:00:33 GMT+0100",
+                    "text": "<p>Neil Perry is one of Australia’s leading and most influential chefs. He has run his acclaimed, three-hatted, signature Rockpool restaurant in Sydney since 1989, and now runs six other restaurants: Rockpool Bar &amp; Grill (Melbourne, Sydney and Perth); Rosetta (Melbourne) and Spice Temple (Sydney and Melbourne).<br>\n<br>\nNeil is also a TV presenter, the author of five cookbooks and has been a consultant to Qantas for more than 15 years. He also produces a range of Neil Perry Fresh food products.<br>\n<br>\nNeil grew up in Sydney, the son of a butcher and, briefly, trained as a hairdresser. Restaurants and food grabbed him in his early 20s and few chefs have remained so respected and relevant for such a long period, making the “produce first” mantra his own long before the notion became fashionable.<br>\n<br>\nAn uncompromising approach to what he buys, and how it is handled, is the foundation of the many styles of cooking practiced in his stable (Italian, Szechuan, grill, contemporary Australian haute cuisine.) A chef in the entrepreneurial mould, Neil is probably Australia’s best-connected chef outside the country; widely considered an elder statesman of his culinary generation for his energy, endeavours and prodigious knowledge of what is happening in international restaurant circles.<br>\n<br>\nNeil’s signature dish is wood roast partridge with cherries and almonds.</p>\n",
+                    "jcr:lastModified": "Thu Oct 16 2014 14:00:48 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/articletext",
+                    "textIsRich": "true"
+                },
+                "textimage_0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "jcr:created": "Thu Oct 16 2014 14:00:52 GMT+0100",
+                    "text": "<p>Phone<br>\n+61 2 9252 1888<br>\nAddress<br>\nRockpool, 11 Bridge Street<br>\nSydney NEW SOUTH WALES 2000<br>\n<br>\nrockpool.com</p>\n",
+                    "jcr:lastModified": "Thu Oct 16 2014 14:01:11 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/textimage",
+                    "textIsRich": "true",
+                    "image": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:lastModifiedBy": "admin",
+                        "jcr:lastModified": "Thu Oct 16 2014 14:01:11 GMT+0100",
+                        "sling:resourceType": "foundation/components/image",
+                        "imageRotate": "0",
+                        "file": {
+                            "jcr:primaryType": "nt:file",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                            "jcr:content": {
+                                "jcr:primaryType": "nt:resource",
+                                "jcr:lastModifiedBy": "admin",
+                                "jcr:mimeType": "image/png",
+                                "jcr:lastModified": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                                ":jcr:data": 10071,
+                                "jcr:uuid": "4dadea4f-f168-4324-a5d5-642b106ec658"
+                            }
+                        }
+                    }
+                },
+                "article": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "media/articles/components/article"
+                }
+            },
+            "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:lastModified": "Thu Oct 16 2014 14:00:01 GMT+0100",
+                "imageRotate": "0"
+            }
+        }
+    },
+    "peter-gilmore": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Peter Gilmore",
+            "cq:template": "/apps/tourism-australia/templates/article-wcm-tourism-australia",
+            "dps-resourceType": "dps:Article",
+            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+            "cq:lastModified": "Thu Oct 16 2014 14:04:01 GMT+0100",
+            "jcr:description": "Peter Gilmore’s original and creative cuisine has seen Quay restaurant receive an unprecedented number of Australian and international awards",
+            "pageTitle": "Peter Gilmore",
+            "cq:tags": [
+                "tourism-australia:pillars/people",
+                "tourism-australia:pillars/Restaurants"
+            ],
+            "sling:resourceType": "tourism-australia/components/pages/article-wcm",
+            "cq:designPath": "/etc/designs/tourism-australia",
+            "cq:lastModifiedBy": "admin",
+            "par": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "foundation/components/parsys",
+                "textimage": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "jcr:created": "Thu Oct 16 2014 14:02:31 GMT+0100",
+                    "jcr:lastModified": "Thu Oct 16 2014 14:03:16 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/textimage",
+                    "textIsRich": "true",
+                    "image": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:lastModifiedBy": "admin",
+                        "jcr:description": "Peter Gilmore, Chef, Sydney, NSW",
+                        "jcr:lastModified": "Thu Oct 16 2014 14:03:16 GMT+0100",
+                        "sling:resourceType": "foundation/components/image",
+                        "imageRotate": "0",
+                        "file": {
+                            "jcr:primaryType": "nt:file",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                            "jcr:content": {
+                                "jcr:primaryType": "nt:resource",
+                                "jcr:lastModifiedBy": "admin",
+                                "jcr:mimeType": "image/jpeg",
+                                "jcr:lastModified": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                                ":jcr:data": 491883,
+                                "jcr:uuid": "1cd543f2-607e-4efa-8f7a-99bca8b8b17d"
+                            }
+                        }
+                    }
+                },
+                "articletext": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "articletitle": "about",
+                    "jcr:created": "Thu Oct 16 2014 14:03:21 GMT+0100",
+                    "text": "<p>Peter Gilmore is internationally acclaimed as one of Australia’s top chefs. Peter has been the executive chef at the three-hatted Quay restaurant since 2001, regularly awarded prizes as one of the best restaurants in Australia. It has retained three hats for 10 consecutive years and has been on the San Pellegrino World’s 50 Best Restaurants for five years, reaching number 29 in 2012. Peter’s food is “inspired by nature”, with an emphasis on texture, and he sources rare plants and heirloom varieties from local producers.<br>\n<br>\nRaised in Sydney, Peter takes his most profound inspiration from the “natural” cuisine of Michel Bras, in Laguiole, France. Peter worked in relative obscurity around Sydney until the owners of Quay, having spotted his work at the now-defunct De Beers, on Sydney’s far North Shore, gave him the job of head chef and the latitude to follow his muse.&nbsp; That was 2001. Peter’s food is contemporary, light, feminine and entirely original and he is one of a handful of Australian chefs recognised as a peer by an international coterie of great creative chefs.<br>\n<br>\nAs Executive Chef, Peter’s creative and original cuisine has established Quay at the forefront of Australia’s food scene, receiving an unprecedented number of Australian and international awards.<br>\n<br>\nIn 2010, Peter released his first cookbook Quay: Food Inspired by Nature, a sumptuous book which captures Peter’s nature-based philosophy and the organic presentation of his stunning cuisine at Quay.<br>\n<br>\nPeter’s signature dish is XO Sea - poached crustacea and bivalves with a garnish based on the ingredients of a traditional XO sauce.</p>\n",
+                    "jcr:lastModified": "Thu Oct 16 2014 14:03:37 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/articletext",
+                    "textIsRich": "true"
+                },
+                "textimage_0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "jcr:created": "Thu Oct 16 2014 14:03:40 GMT+0100",
+                    "text": "<p>Phone<br>\n+61 2 9251 5600<br>\nAddress<br>\nQuay, Upper Level, Overseas Passenger Terminal<br>\nThe Rocks, Sydney NEW SOUTH WALES 2000<br>\n<br>\nquay.com.au</p>\n",
+                    "jcr:lastModified": "Thu Oct 16 2014 14:04:01 GMT+0100",
+                    "sling:resourceType": "tourism-australia/components/textimage",
+                    "textIsRich": "true",
+                    "image": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:lastModifiedBy": "admin",
+                        "jcr:lastModified": "Thu Oct 16 2014 14:04:01 GMT+0100",
+                        "sling:resourceType": "foundation/components/image",
+                        "imageRotate": "0",
+                        "file": {
+                            "jcr:primaryType": "nt:file",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                            "jcr:content": {
+                                "jcr:primaryType": "nt:resource",
+                                "jcr:lastModifiedBy": "admin",
+                                "jcr:mimeType": "image/png",
+                                "jcr:lastModified": "Mon Nov 10 2014 09:09:39 GMT+0000",
+                                ":jcr:data": 10071,
+                                "jcr:uuid": "11c5b1d4-727c-4bbd-b977-657b1baa6653"
+                            }
+                        }
+                    }
+                },
+                "article": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "media/articles/components/article"
+                }
+            },
+            "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:lastModified": "Thu Oct 16 2014 14:02:21 GMT+0100",
+                "imageRotate": "0"
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+<ion-view title="Content Sync">
+    
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    
+    <ion-content class="has-header">
+        
+        <ion-view title="entryInfo">
+            <p id="contenttoupdate"></p>
+            <p id="statusPlace"></p>
+
+            <!--p><textarea id="textArea"></textarea></p-->
+
+            <div ng-bind-html="infoText"></div>
+            <!-- view content -->
+        </ion-view>
+        
+        <ion-list>
+            <ion-item ng-repeat="page in sectionPages">{{page.title}}</ion-item>
+        </ion-list>
+        
+    </ion-content>
+    
+</ion-view>
