@@ -78,6 +78,8 @@ ContentSyncApp.controller('MapCtrl', function($scope, $ionicLoading) {
 
 ContentSyncApp.controller('BeaconsCtrl', function($scope, $ionicLoading) {
     
+    console.log("BeaconsCtrl START");
+    
     $scope.beaconRegion = {
         id: 'RaspberryPi',
         uuid: '636F3F8F-6491-4BEE-95F7-D8CC64A863B5',
@@ -91,21 +93,17 @@ ContentSyncApp.controller('BeaconsCtrl', function($scope, $ionicLoading) {
         {id: 'page-face', uuid:'A4950001-C5B1-4B44-B512-1370F02D74DE', major: 1, minor: 3}
     ];
     
-    console.log("BeaconsCtrl");
-    
     startScanForBeacons();
     
     function startScanForBeacons() {
         
-        console.log("startScanForBeacons");
+        console.log("[startScanForBeacons] START");
         
-        document.getElementById("statusPlace").innerHTML += "<br/>[successRequestFileSystem] Starting scan... ";
+        document.getElementById("statusPlace").innerHTML += "<br/>Starting scan... ";
 
         //required in iOS 8+
         //cordova.plugins.locationManager.requestWhenInUseAuthorization(); 
         cordova.plugins.locationManager.requestAlwaysAuthorization()
-        
-        console.log("5555555555555555555555");
         
         var logToDom = function (message) {
             var e = document.createElement('label');
