@@ -5,9 +5,27 @@
     </ion-nav-buttons>
     
     <ion-content class="has-header">
-        <ion-list>
-            <ion-item ng-repeat="article in articles" href="#/app/article/{{article.id}}">{{article.title}}</ion-item>
-        </ion-list>
+        
+        <ion-view title="entryInfo">
+            <p id="contenttoupdate"></p>
+            <p id="statusPlace"></p>
+
+            <!--p><textarea id="textArea"></textarea></p-->
+
+            <div ng-bind-html="messages"></div>
+            <div ng-bind-html="infoText"></div>
+            <div ng-bind-html="somedata"></div>
+            <!-- view content -->
+        </ion-view>
+        
+        <div class="list">
+            <a ng-repeat="page in sectionPages" href="#/{{page.id}}" class="item item-thumbnail-left">
+                <img src="cover.jpg">
+                <h2>{{page.title}}</h2>
+                <p>{{page.description}}</p>
+            </a>
+        </div>
+        
     </ion-content>
     
 </ion-view>

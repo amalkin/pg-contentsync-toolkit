@@ -1,4 +1,5 @@
 var DownloadApp = function() {
+    console.log("[DownloadApp.CALLED9999999999999]");
 }
 
 DownloadApp.prototype = {
@@ -88,24 +89,32 @@ DownloadApp.prototype = {
 
                         var localPath = fileEntry.fullPath;
                         var localUrl = fileEntry.toURL();
+                        
+                        console.log("[getSectionPages] localPath "+localPath);
+                        console.log("[getSectionPages] localUrl "+localUrl);
 
                         $http.get(localUrl).success(
                             function(data) {
+                                
+                                var pageChildren = {};
 
                                 for(var name in data){
                                     console.log("[getSectionPages] looping: ");
                                     if(data[name]['jcr:content']){
-                                        var child = {};
-                                        child['title'] = data[name]['jcr:content']['jcr:title'];
-                                        console.log("[getSectionPages] childPage: "+data[name]['jcr:content']['jcr:title']);
+                                        pageChildren['title'] = data[name]['jcr:content']['jcr:title'];
+                                        console.log("[getSectionPages] pageChildren: "+data[name]['jcr:content']['jcr:title']);
 
                                         var pageTitle = data[name]['jcr:content']['jcr:title'];
-                                        $scope.sectionPages.push({
-                                            title: pageTitle
-                                        });
+                                        //$scope.sectionPages.push({
+                                        //    title: pageTitle
+                                        //});
 
                                     }
                                 }
+                                
+                                console.log("[localUrl] 4565465454454565: "+pageChildren);
+                                
+                                //return pageChildren;
 
                             });
 

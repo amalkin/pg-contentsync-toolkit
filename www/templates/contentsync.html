@@ -16,9 +16,13 @@
             <!-- view content -->
         </ion-view>
         
-        <ion-list>
-            <ion-item ng-repeat="page in sectionPages">{{page.title}}</ion-item>
-        </ion-list>
+        <div class="list">
+            <a ng-repeat="page in sectionPages" href="#/{{page.id}}" class="item item-thumbnail-left">
+                <img src="cover.jpg">
+                <h2>{{page.title}}</h2>
+                <p>{{page.description}}</p>
+            </a>
+        </div>
         
     </ion-content>
     

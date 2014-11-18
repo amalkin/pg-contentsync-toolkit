@@ -63,6 +63,16 @@ ContentSyncApp.config(function($stateProvider, $urlRouterProvider) {
         }
     })
 
+    .state('app.homepage', {
+        url: "/homepage",
+        views: {
+            'menuContent' :{
+                templateUrl: "templates/homepage.html",
+                controller: 'HomepageCtrl'
+            }
+        }
+    })
+
     .state('app.map', {
         url: "/map",
         views: {
@@ -133,5 +143,5 @@ ContentSyncApp.config(function($stateProvider, $urlRouterProvider) {
     });
     
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/playlists');
+    $urlRouterProvider.otherwise('/app/homepage');
 });
