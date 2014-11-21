@@ -8,6 +8,56 @@ ContentSyncApp.factory('PageDataService', function($q, $timeout, $http) {
         }, 2000);
     };
     
+    var getScanBook = function(callback) {
+        
+        console.log("[getScanBook] STARTING: ");
+        
+        cordova.plugins.barcodeScanner.scan(
+            function (result) {
+                setTimeout(function() {
+                    
+                    //var url = 'http://www.lookupbyisbn.com/Search/Book/' + result.text + '/1';                
+                    //var bookinfo = "<a href='#' onclick=window.open('" + url + "','_blank')>Learn more about this book</a>";
+                    //console.log("[ScanCtrl] bookinfo: "+bookinfo);
+                    //document.getElementById('bookinfo').innerHTML += "<br/>"+bookinfo;
+                    
+                    var googleApiUrl = 'https://www.googleapis.com/books/v1/volumes?q=isbn:' + result.text;
+    
+                    //document.getElementById('bookinfo').innerHTML = "<br/><h3>Book</h3>";
+                    
+                    $http.get(googleApiUrl).success(
+                        function(data) {
+                            
+                            var scanBook = [];
+                            
+                            for (var i = 0; i < data.items.length; i++) {
+                                var item = data.items[i];
+                                
+                                scanBook.push({
+                                    "title" : item.volumeInfo.title,
+                                    "authors" : item.volumeInfo.authors,
+                                    "description" : item.volumeInfo.description,
+                                    "smallThumbnail" : item.volumeInfo.imageLinks.smallThumbnail,
+                                    "previewLink" : item.volumeInfo.previewLink
+                                });
+                                
+                            }
+                
+                            callback(scanBook);
+                            
+                        }
+                    );
+                    
+                }, 0);
+            },
+
+            function (error) {
+                alert("Scanning failed: " + error);
+            }
+        )
+        
+    };
+    
     var getNewsStories = function(callback) {
         
         console.log("[getNewsStories] STARTING: ");
@@ -46,11 +96,17 @@ ContentSyncApp.factory('PageDataService', function($q, $timeout, $http) {
     
     var getSectionPageData = function(callback) {
         
-        console.log("[getSectionPageData] STARTING: ");
+        console.log("[getSectionPageData] STARTING: "+document.getElementById("foldername").value);
         
         var fsRoot = null;
         var folderName = globalData.glfolderName;
-        var testFileArticle = globalData.testFileArticle + globalData.fileArticleExt;        
+        var testFileArticle = globalData.testFileArticle;
+        
+        var searchFolder = document.getElementById("foldername").value;
+        
+        var searchF = ((searchFolder != "") ? searchFolder : testFileArticle) + globalData.fileArticleExt;
+        searchF = searchF.replace(/\s+/g, '');
+        console.log("[getSectionPageData] searchF: "+searchF);
 
         requestFileSystem(LocalFileSystem.PERSISTENT, 0, successRequestFileSystem, failRequestFileSystem);
         function successRequestFileSystem(fs) {
@@ -60,7 +116,7 @@ ContentSyncApp.factory('PageDataService', function($q, $timeout, $http) {
             
             fsRoot.getDirectory(folderName +globalData.glopenRootFolder, { create: false }, function (folder) {
                 
-                folder.getFile(testFileArticle, {create: false}, function (fileEntry) {
+                folder.getFile(searchF, {create: false}, function (fileEntry) {
                     
                     var localUrl = fileEntry.toURL();
                     
@@ -104,7 +160,9 @@ ContentSyncApp.factory('PageDataService', function($q, $timeout, $http) {
         
         getSectionPageData : getSectionPageData,
         
-        getNewsStories : getNewsStories
+        getNewsStories : getNewsStories,
+        
+        getScanBook : getScanBook
         
     }
     

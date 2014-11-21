@@ -12,10 +12,12 @@
             </div>
         </div>
         
-        <div class="card">
-            <div class="item item-text-wrap">                
-                <div id="bookinfo"></div>
-            </div>
+        <div class="list">
+            <a ng-repeat="book in scanBook" href="#/{{book.previewLink}}" class="item item-thumbnail-left">
+                <img src="{{book.smallThumbnail}}"></img>
+                <p><strong>Title</strong>: {{book.title}}<br/><strong>Author</strong>: {{book.authors}}</p>
+                <p>{{book.description}}</p>
+            </a>
         </div>
         
     </ion-content>

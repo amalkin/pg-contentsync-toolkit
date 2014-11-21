@@ -234,48 +234,18 @@ ContentSyncApp.controller('HomepageCtrl', function($scope, $ionicLoading, PageDa
 })
 
 
-ContentSyncApp.controller('ScanCtrl', function($scope, $ionicLoading, $http) {
+ContentSyncApp.controller('ScanCtrl', function($scope, $ionicLoading, PageDataService, $http) {
     
     console.log("ScanCtrl");
     
     $scope.doScan = function() {
-        cordova.plugins.barcodeScanner.scan(
-            function (result) {
-                setTimeout(function() {
-                    //var url = 'http://www.lookupbyisbn.com/Search/Book/' + result.text + '/1';                
-                    //var bookinfo = "<a href='#' onclick=window.open('" + url + "','_blank')>Learn more about this book</a>";
-                    //console.log("[ScanCtrl] bookinfo: "+bookinfo);
-                    //document.getElementById('bookinfo').innerHTML += "<br/>"+bookinfo;
-                    
-                    
-                    var googleApiUrl = 'https://www.googleapis.com/books/v1/volumes?q=isbn:' + result.text;
-    
-                    //document.getElementById('bookinfo').innerHTML = "<br/><h3>Book</h3>";
-                    
-                    $http.get(googleApiUrl).success(
-                        function(data) {
-                            
-                            console.log("[ScanCtrl] googleApiUrl: "+googleApiUrl);
-                            
-                            for (var i = 0; i < data.items.length; i++) {
-                                var item = data.items[i];
-                                document.getElementById('bookinfo').innerHTML += "<strong>Title<strong>: "+item.volumeInfo.title;
-                                document.getElementById('bookinfo').innerHTML += "<br/><strong>Author<strong>: "+item.volumeInfo.authors;
-                                document.getElementById('bookinfo').innerHTML += "<br/><p>"+item.volumeInfo.description+"</p>";
-                            }
-                            
-                        }
-                    );
-                    
-                }, 0);
-            },
-
-            function (error) {
-                alert("Scanning failed: " + error);
-            }
-        )
-    };
-    
+        
+        PageDataService.getScanBook(function(messages) {
+            $scope.scanBook = messages;
+            console.log("getScanBookbbbbbbbbbbbb: "+messages);
+        });
+        
+    };   
     
     
 })
