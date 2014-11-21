@@ -4,21 +4,23 @@
         <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
     </ion-nav-buttons>
     
-    <ion-content class="has-header">
+    <ion-content class="has-header" padding="true">
         
-        <ion-view title="entryInfo">
-            <p id="contenttoupdate"></p>
-            <p id="statusPlace"></p>
+        <div id="displaymessages">
+        
+            <div id="contenttoupdate"></div>
 
-            <!--p><textarea id="textArea"></textarea></p-->
+            <div id="statusPlace"></div>
 
-            <div ng-bind-html="infoText"></div>
-            <!-- view content -->
-        </ion-view>
+            <div id="percentage"></div>
+
+            <div id="infoText"></div>
+            
+        </div>
         
         <div class="list">
             <a ng-repeat="page in sectionPages" href="#/{{page.id}}" class="item item-thumbnail-left">
-                <img src="cover.jpg">
+                <img src="http://forum.codoh.com/images/avatars/avatar-blank.jpg"></img>
                 <h2>{{page.title}}</h2>
                 <p>{{page.description}}</p>
             </a>

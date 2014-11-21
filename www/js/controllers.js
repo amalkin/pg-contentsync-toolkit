@@ -97,6 +97,23 @@ ContentSyncApp.controller('BeaconsCtrl', function($scope, $ionicLoading) {
     
     function startScanForBeacons() {
         
+        /*
+        pluginResult format
+        {
+        "region":
+            {
+                "typeName": "BeaconRegion",
+                uuid : "",
+                minor: 
+                identifier: 
+                major: 
+            },
+        "beacons":
+            [],
+            "eventType": "did.."
+        }
+        */
+        
         console.log("[startScanForBeacons] START");
         
         document.getElementById("statusPlace").innerHTML += "<br/>Starting scan... ";
@@ -123,25 +140,26 @@ ContentSyncApp.controller('BeaconsCtrl', function($scope, $ionicLoading) {
         delegate.didDetermineStateForRegion = function (pluginResult) {
 
             //logToDom('[DOM] didDetermineStateForRegion: ' + JSON.stringify(pluginResult));
-            document.getElementById("statusPlace").innerHTML += "<br/>[DOM] didDetermineStateForRegion: " + JSON.stringify(pluginResult);
+            document.getElementById("statusPlace").innerHTML += "<br/>[DOM 1111111111] didDetermineStateForRegion: " + JSON.stringify(pluginResult);
 
-            cordova.plugins.locationManager.appendToDeviceLog('[DOM] didDetermineStateForRegion: ' + JSON.stringify(pluginResult));
+            //cordova.plugins.locationManager.appendToDeviceLog('[DOM] didDetermineStateForRegion: ' + JSON.stringify(pluginResult));
         };
         
         delegate.didStartMonitoringForRegion = function (pluginResult) {
             console.log('didStartMonitoringForRegion:' + pluginResult);
 
             //logToDom('didStartMonitoringForRegion:' + JSON.stringify(pluginResult));
-            document.getElementById("statusPlace").innerHTML += "<br/>didStartMonitoringForRegion:" + JSON.stringify(pluginResult);
+            document.getElementById("statusPlace").innerHTML += "<br/>222222222 didStartMonitoringForRegion:" + JSON.stringify(pluginResult);
         };
         
         delegate.didRangeBeaconsInRegion = function (pluginResult) {
-            logToDom('[DOM] didRangeBeaconsInRegion: ' + JSON.stringify(pluginResult));
-            document.getElementById("statusPlace").innerHTML += "<br/>[DOM] didRangeBeaconsInRegion: " + JSON.stringify(pluginResult);
+            //logToDom('[DOM] didRangeBeaconsInRegion: ' + JSON.stringify(pluginResult));
+            //document.getElementById("statusPlace").innerHTML += "<br/>[DOM] didRangeBeaconsInRegion: " + JSON.stringify(pluginResult);
+            didRangeBeaconsInRegion(pluginResult);
         };
         
         var uuid = '636F3F8F-6491-4BEE-95F7-D8CC64A863B5';
-        var identifier = 'RaspberryPi';
+        var identifier = 'RaspberryPi - Sitting Room';
         var minor = 0;
         var major = 0;
         var beaconRegion = new cordova.plugins.locationManager.BeaconRegion(identifier, uuid, major, minor);
@@ -154,7 +172,48 @@ ContentSyncApp.controller('BeaconsCtrl', function($scope, $ionicLoading) {
 
         cordova.plugins.locationManager.startRangingBeaconsInRegion(beaconRegion)
             .fail(console.error("[startRangingBeaconsInRegion] ERROR "))
-            .done();	
+            .done();
+        
+        function didRangeBeaconsInRegion(pluginResult) {
+            
+            console.log("[didRangeBeaconsInRegion] START");
+            
+            if (0 == pluginResult.beacons.length) {
+                document.getElementById("statusPlace").innerHTML += "<br/>NOOOO Beacon: ";
+                //return
+            }
+            
+            var beacon = pluginResult.beacons[0];
+            
+            //document.getElementById("statusPlace").innerHTML += "<br/>[didRangeBeaconsInRegion]: " + JSON.stringify(pluginResult);
+            document.getElementById("statusPlace").innerHTML += "<br/><br/>Beacon: ";
+            document.getElementById("statusPlace").innerHTML += "<br/>Length: " + pluginResult.beacons.length;
+            document.getElementById("statusPlace").innerHTML += "<br/>Proximity: " + beacon.proximity;
+            document.getElementById("statusPlace").innerHTML += "<br/>Identifier: " + pluginResult.region.identifier;
+            document.getElementById("statusPlace").innerHTML += "<br/>TypeName: " + pluginResult.region.typeName;
+            document.getElementById("statusPlace").innerHTML += "<br/>UUID: " + pluginResult.region.uuid;
+            document.getElementById("statusPlace").innerHTML += "<br/>Major - Minor: " + pluginResult.region.major + " " + pluginResult.region.minor;
+            
+            var pageId = pluginResult.region.identifier;
+            
+            console.log('ranged beacon: ' + pageId + ' ' + beacon.proximity)
+            
+            // If the beacon is close and represents a new page, then show the page.
+            if ((beacon.proximity == 'ProximityImmediate' || beacon.proximity == 'ProximityNear') && app.currentPage != pageId) {
+                //app.gotoPage(pageId)
+                return
+            }
+
+            // If the beacon represents the current page but is far away,
+            // then show the default page.
+            if ((beacon.proximity == 'ProximityFar' || beacon.proximity == 'ProximityUnknown') && app.currentPage == pageId) {
+                //app.gotoPage('page-default')
+                return
+            }
+            
+        }
+        
+        
     }
     
 })
@@ -163,6 +222,53 @@ ContentSyncApp.controller('BeaconsCtrl', function($scope, $ionicLoading) {
 ContentSyncApp.controller('HomepageCtrl', function($scope, $ionicLoading) {
     
     console.log("HomepageCtrl");
+    
+    
+    
+})
+
+
+ContentSyncApp.controller('ScanCtrl', function($scope, $ionicLoading, $http) {
+    
+    console.log("ScanCtrl");
+    
+    $scope.doScan = function() {
+        cordova.plugins.barcodeScanner.scan(
+            function (result) {
+                setTimeout(function() {
+                    //var url = 'http://www.lookupbyisbn.com/Search/Book/' + result.text + '/1';                
+                    //var bookinfo = "<a href='#' onclick=window.open('" + url + "','_blank')>Learn more about this book</a>";
+                    //console.log("[ScanCtrl] bookinfo: "+bookinfo);
+                    //document.getElementById('bookinfo').innerHTML += "<br/>"+bookinfo;
+                    
+                    
+                    var googleApiUrl = 'https://www.googleapis.com/books/v1/volumes?q=isbn:' + result.text;
+    
+                    //document.getElementById('bookinfo').innerHTML = "<br/><h3>Book</h3>";
+                    
+                    $http.get(googleApiUrl).success(
+                        function(data) {
+                            
+                            console.log("[ScanCtrl] googleApiUrl: "+googleApiUrl);
+                            
+                            for (var i = 0; i < data.items.length; i++) {
+                                var item = data.items[i];
+                                document.getElementById('bookinfo').innerHTML += "<strong>Title<strong>: "+item.volumeInfo.title;
+                                document.getElementById('bookinfo').innerHTML += "<br/><strong>Author<strong>: "+item.volumeInfo.authors;
+                                document.getElementById('bookinfo').innerHTML += "<br/><p>"+item.volumeInfo.description+"</p>";
+                            }
+                            
+                        }
+                    );
+                    
+                }, 0);
+            },
+
+            function (error) {
+                alert("Scanning failed: " + error);
+            }
+        )
+    };
     
     
     
@@ -210,12 +316,12 @@ ContentSyncApp.controller('ContentSyncCtrl', function($scope, $ionicLoading, $ht
         
         var App = new DownloadApp();
         var uri = encodeURI(globalData.glzipUrl);
-        var fileName = "app-content.zip";
-        var folderName = "content";
+        var fileName = globalData.glfileName;
+        var folderName = globalData.glfolderName;
         
         document.getElementById("statusPlace").innerHTML += "<br/>[successRequestFileSystem] Loading: " + globalData.glzipUrl;
         App.load(uri, folderName, fileName,
-            /*progress*/function(percentage) { document.getElementById("statusPlace").innerHTML += "<br/>" + percentage + "%"; },
+            /*progress*/function(percentage) { document.getElementById("percentage").innerHTML = "<br/>" + percentage + "%"; },
             /*success*/function(entry) { document.getElementById("statusPlace").innerHTML += "<br/>Zip saved to: " + entry.toURL(); },
             /*fail*/function() { document.getElementById("statusPlace").innerHTML += "<br/>Failed load zip: " + that.uri; }
         );
@@ -230,7 +336,7 @@ ContentSyncApp.controller('ContentSyncCtrl', function($scope, $ionicLoading, $ht
         PageDataService.getSectionPageData(function(messages) {
             console.log("getSectionPageData");
 
-            //$scope.sectionPages = messages;
+            $scope.sectionPages = messages;
         });
         
     }
@@ -244,6 +350,8 @@ ContentSyncApp.controller('ContentSyncCtrl', function($scope, $ionicLoading, $ht
     console.log("Content Sync Ending");
     
     $ionicLoading.hide();
+    
+    document.getElementById("displaymessages").style.display = "none";
     
 })
 

@@ -20,10 +20,15 @@ ContentSyncApp.run(function($ionicPlatform) {
         }
         
         window.globalData = {};
-        globalData.glzipUrl = "http://192.168.1.228:4503/content/app-content.zip"; //publish312.adobedemo.com //192.168.1.228:4503
+        globalData.glzipUrl = "http://192.168.1.228:4503/content/phonegap/am-contentsync/app-content.zip"; //publish312.adobedemo.com //192.168.1.228:4503 /content/phonegap/am-contentsync/app-content.zip /content/app-content.zip
         globalData.glworkerScriptsPath = "/js/";
         globalData.glopenRootFolder = "/content/tourism-australia/tourism-australia/en/explore/national/"; // /content/tourism-australia/tourism-australia/en/explore/national /content/geometrixx-media/en/entertainment
         globalData.glopenRootFile = "people-dps.app.html"; // behind-the-scenes-with-the-big-heist.app.html people-dps.app.html
+        
+        globalData.glfileName = "app-content.zip";
+        globalData.glfolderName = "content";
+        globalData.testFileArticle = "people";
+        globalData.fileArticleExt = "-dps.infinity.json";
         
         // Load default settings and variables
         //$localstorage.set('zipUrl', 'http://localhost:4503/content/app-content.zip');
@@ -89,6 +94,16 @@ ContentSyncApp.config(function($stateProvider, $urlRouterProvider) {
             'menuContent' :{
                 templateUrl: "templates/contentsync.html",
                 controller: 'ContentSyncCtrl'
+            }
+        }
+    })
+
+    .state('app.scan', {
+        url: "/scan",
+        views: {
+            'menuContent' :{
+                templateUrl: "templates/scan.html",
+                controller: 'ScanCtrl'
             }
         }
     })

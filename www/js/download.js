@@ -1,5 +1,5 @@
 var DownloadApp = function() {
-    console.log("[DownloadApp.CALLED9999999999999]");
+    console.log("[DownloadApp.CALLED]");
 }
 
 DownloadApp.prototype = {
@@ -69,71 +69,6 @@ DownloadApp.prototype = {
                 typeof that.fail === 'function' && that.fail(error);
             }
         );
-    },
-
-    getSectionPages: function(folderName, fileName, success, fail) {
-        var that = this;
-        that.success = success;
-        that.fail = fail;
-
-        that.getFilesystem(
-            function(fileSystem) {
-
-                console.log("[getSectionPages] section files: "+fileSystem+folderName+globalData.glopenRootFolder+"people-dps.infinity.json");
-
-                that.getFolder(fileSystem, folderName +globalData.glopenRootFolder, function (folder) {
-
-                    console.log("[getSectionPages] SUCCESS ");
-
-                    folder.getFile("people-dps.infinity.json", {create: false}, function (fileEntry) {
-
-                        var localPath = fileEntry.fullPath;
-                        var localUrl = fileEntry.toURL();
-                        
-                        console.log("[getSectionPages] localPath "+localPath);
-                        console.log("[getSectionPages] localUrl "+localUrl);
-
-                        $http.get(localUrl).success(
-                            function(data) {
-                                
-                                var pageChildren = {};
-
-                                for(var name in data){
-                                    console.log("[getSectionPages] looping: ");
-                                    if(data[name]['jcr:content']){
-                                        pageChildren['title'] = data[name]['jcr:content']['jcr:title'];
-                                        console.log("[getSectionPages] pageChildren: "+data[name]['jcr:content']['jcr:title']);
-
-                                        var pageTitle = data[name]['jcr:content']['jcr:title'];
-                                        //$scope.sectionPages.push({
-                                        //    title: pageTitle
-                                        //});
-
-                                    }
-                                }
-                                
-                                console.log("[localUrl] 4565465454454565: "+pageChildren);
-                                
-                                //return pageChildren;
-
-                            });
-
-                    }, function (error) {
-                        console.log("failed to get file: " + error.code);
-                        typeof that.fail === 'function' && that.fail(error);
-                    });
-
-                }, function (error) {
-                    console.log("failed to get folder: " + error.code);
-                    typeof that.fail === 'function' && that.fail(error);
-                });
-
-            }, function(error) {
-                console.log("[read] failed to get filesystem: " + error.code);
-                typeof that.fail === 'function' && that.fail(error);
-            }
-        );
-
     },
 
     unzip: function(folderName, fileName, success, fail) {

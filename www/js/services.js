@@ -13,7 +13,8 @@ ContentSyncApp.factory('PageDataService', function($q, $timeout, $http) {
         console.log("[getSectionPageData] STARTING: ");
         
         var fsRoot = null;
-        var folderName = "content";
+        var folderName = globalData.glfolderName;
+        var testFileArticle = globalData.testFileArticle + globalData.fileArticleExt;        
 
         requestFileSystem(LocalFileSystem.PERSISTENT, 0, successRequestFileSystem, failRequestFileSystem);
         function successRequestFileSystem(fs) {
@@ -23,7 +24,7 @@ ContentSyncApp.factory('PageDataService', function($q, $timeout, $http) {
             
             fsRoot.getDirectory(folderName +globalData.glopenRootFolder, { create: false }, function (folder) {
                 
-                folder.getFile("people-dps.infinity.json", {create: false}, function (fileEntry) {
+                folder.getFile(testFileArticle, {create: false}, function (fileEntry) {
                     
                     var localUrl = fileEntry.toURL();
                     
