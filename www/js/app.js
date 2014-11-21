@@ -30,6 +30,10 @@ ContentSyncApp.run(function($ionicPlatform) {
         globalData.testFileArticle = "people";
         globalData.fileArticleExt = "-dps.infinity.json";
         
+        globalData.glnewsApiUrl = "android.3sidedcube.com/bbcnews/";
+        globalData.glnewsApiType = "stories";
+        globalData.glnewsApiTopic = "world";
+        
         // Load default settings and variables
         //$localstorage.set('zipUrl', 'http://localhost:4503/content/app-content.zip');
         

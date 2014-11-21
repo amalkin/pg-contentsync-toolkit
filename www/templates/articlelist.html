@@ -6,17 +6,14 @@
     
     <ion-content class="has-header">
         
-        <ion-view title="entryInfo">
-            <p id="contenttoupdate"></p>
-            <p id="statusPlace"></p>
-
-            <!--p><textarea id="textArea"></textarea></p-->
-
-            <div ng-bind-html="messages"></div>
-            <div ng-bind-html="infoText"></div>
-            <div ng-bind-html="somedata"></div>
-            <!-- view content -->
-        </ion-view>
+        <div class="list">
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper">
+                    <input type="text" id="foldername" placeholder="Folder name">
+                </label>
+                <button class="button button-small" ng-click="doSelectFolder()">Select</button>
+            </div>
+        </div>
         
         <div class="list">
             <a ng-repeat="page in sectionPages" href="#/{{page.id}}" class="item item-thumbnail-left">

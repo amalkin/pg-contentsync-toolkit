@@ -8,6 +8,42 @@ ContentSyncApp.factory('PageDataService', function($q, $timeout, $http) {
         }, 2000);
     };
     
+    var getNewsStories = function(callback) {
+        
+        console.log("[getNewsStories] STARTING: ");
+        
+        //var newsUrl = globalData.glnewsApiUrl;
+        //var newsType = globalData.glnewsApiType;
+        //var newsTopic = globalData.glnewsApiTopic;
+        
+        var newsApiUrl = 'http://android.3sidedcube.com/bbcnews/?type=stories&topic=world';
+
+        $http.get(newsApiUrl).success(
+            function(data) {
+
+                console.log("[getNewsStories: "+newsApiUrl);
+                
+                var newsStories = [];
+
+                for (var i = 0; i < data.stories.length; i++) {
+                    var item = data.stories[i];
+                    
+                    newsStories.push({
+                        "link" : item.link,
+                        "title" : item.title,
+                        "description" : item.description,
+                        "thumbnail" : item.thumbnail
+                    });
+                    
+                }
+                
+                callback(newsStories);
+
+            }
+        );
+        
+    };
+    
     var getSectionPageData = function(callback) {
         
         console.log("[getSectionPageData] STARTING: ");
@@ -66,7 +102,9 @@ ContentSyncApp.factory('PageDataService', function($q, $timeout, $http) {
         
         getMessages : getMessages,
         
-        getSectionPageData : getSectionPageData
+        getSectionPageData : getSectionPageData,
+        
+        getNewsStories : getNewsStories
         
     }
     

@@ -219,9 +219,15 @@ ContentSyncApp.controller('BeaconsCtrl', function($scope, $ionicLoading) {
 })
 
 
-ContentSyncApp.controller('HomepageCtrl', function($scope, $ionicLoading) {
+ContentSyncApp.controller('HomepageCtrl', function($scope, $ionicLoading, PageDataService) {
     
-    console.log("HomepageCtrl");
+    console.log("HomepageCtrl");    
+    
+    PageDataService.getNewsStories(function(messages) {
+        console.log("getNewsStories");
+        
+        $scope.newsPages = messages;
+    });
     
     
     
@@ -285,13 +291,18 @@ ContentSyncApp.controller('ArticleListCtrl', function($scope, $ionicLoading, Pag
     PageDataService.getMessages(function(messages) {
         $scope.messages = messages;
     });
-    
-    
-    PageDataService.getSectionPageData(function(messages) {
-        console.log("getSectionPageData");
         
-        $scope.sectionPages = messages;
-    });
+    $scope.doSelectFolder = function() {
+        
+        console.log("[ArticleListCtrl.doSelectFolder] value: "+document.getElementById("foldername").value);
+        
+        PageDataService.getSectionPageData(function(messages) {
+            console.log("getSectionPageData");
+
+            $scope.sectionPages = messages;
+        });
+        
+    };
     
     
 })

@@ -6,34 +6,12 @@
     
     <ion-content class="has-header">
         
-        <div class="list card">
-
-            <div class="item item-avatar">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV9dkCItdPQLYj4HTiZqK9AvLubGBt6gUUuqnhrcNmbS6WOLIdqDo8-TXe">
-                <h2>World news and comment from the Guardian | The Guardian</h2>
-                <p>Latest World news news, comment and analysis from the Guardian, the world's leading liberal voice.</p>
-            </div>
-
-            <a class="item item-icon-left assertive" href="#">
-                <i class="icon ion-arrow-right-b"></i>
-                www.theguardian.com/world
+        <div class="list">
+            <a ng-repeat="page in newsPages" href="#/{{page.link}}" class="item item-thumbnail-left">
+                <img src="{{page.thumbnail}}"></img>
+                <h2>{{page.title}}</h2>
+                <p>{{page.description}}</p>
             </a>
-
-        </div>
-        
-        <div class="list card">
-
-            <div class="item item-avatar">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV9dkCItdPQLYj4HTiZqK9AvLubGBt6gUUuqnhrcNmbS6WOLIdqDo8-TXe">
-                <h2>World news and comment from the Guardian | The Guardian</h2>
-                <p>Latest World news news, comment and analysis from the Guardian, the world's leading liberal voice.</p>
-            </div>
-
-            <a class="item item-icon-left assertive" href="#">
-                <i class="icon ion-arrow-right-b"></i>
-                www.theguardian.com/world
-            </a>
-
         </div>
         
     </ion-content>
